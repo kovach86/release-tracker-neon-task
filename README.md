@@ -44,6 +44,6 @@ replace with one in project, and try validating against your users location is /
 - Spring boot application 
 - mysql and hibernate ORM
 - firebase admin
-- log4j2 (logs are loocated  <b>/Logs<b> folder
+- log4j2 (logs are located  <b>/Logs<b> folder
 - open api swagger 
 
