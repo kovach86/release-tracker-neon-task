@@ -1,0 +1,32 @@
+version: '3.1'
+services:
+
+  mysql:
+    container_name: mysql_server
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: RootPass!
+    ports:
+      - '3306:3306'
+    networks:
+      - release-tracker-backend
+
+  release-tracker:
+    build: .
+    container_name: release-tracker-api
+    image: release-tracker-image:latest
+    depends_on:
+      - mysql
+    ports:
+      - '8090:8080'
+    restart: always
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/ReleaseDb?createDatabaseIfNotExist=true
+    networks:
+      - release-tracker-backend
+    links:
+      - mysql
+networks:
+  release-tracker-backend:
+    driver: bridge

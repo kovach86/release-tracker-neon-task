@@ -49,9 +49,9 @@ public class ReleaseController {
 
     @GetMapping("/filter")
     public ResponseEntity<PaginationResponse> getReleaseByParams(@RequestParam(required = false, defaultValue = "0001-01-01") String releaseDate,
-                                                                 @RequestParam(required = false, value = "") String lastUpdateDate,
-                                                                 @RequestParam(required = false, value = "") String createdAt,
-                                                                 @RequestParam(required = false, value = "") String releaseStatus, @RequestParam(required = false) String description,
+                                                                 @RequestParam(required = false, defaultValue = "") String lastUpdateDate,
+                                                                 @RequestParam(required = false, defaultValue = "") String createdAt,
+                                                                 @RequestParam(required = false, defaultValue = "") String releaseStatus, @RequestParam(required = false) String description,
                                                                  @RequestParam(required = false) String name,
                                                                  @RequestParam(required = false, defaultValue = "1") Integer page,
                                                                  @RequestParam(required = false, defaultValue = "10") Integer recordsToTake) {
