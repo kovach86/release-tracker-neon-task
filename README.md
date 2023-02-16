@@ -40,7 +40,7 @@ replace with one in project, and try validating against your users location is /
 
 ![get request](https://user-images.githubusercontent.com/2013682/219374168-f679e1f6-f4ee-4f56-bdd5-f566009c244e.PNG)
 
-4. Technologies and frameworks used:
+## Technologies and frameworks used:
 - Spring boot application 
 - mysql and hibernate ORM
 - firebase admin
