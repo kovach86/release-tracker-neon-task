@@ -1,14 +1,11 @@
 # java-demo Release tracker task for neon
 
 ## Prerequisites:
-mysql server
-jdk 19
-docker for desktop (optional)
+- mysql server
+- jdk 19
+- docker for desktop (optional)
 
 ## Initial set up
-- Technologies and frameworks used:
-Spring boot application, hibernate ORM, firebase admin, open api swagger
-
 1. To run application with docker, just navigate to root folder and enter command docker-compose up. It will bring containers for mysql server and for the spring boot api.
 - Without docker, just change mysql connection string(which is located to application.properties) to point to appropriate sql server, and start the app, 
 hibernate will create database on start up.
@@ -39,3 +36,6 @@ hibernate will create database on start up.
 3. Hit some endpoint and you should see in curl section that Bearer is correctly set in header.
 
 ![get request](https://user-images.githubusercontent.com/2013682/219374168-f679e1f6-f4ee-4f56-bdd5-f566009c244e.PNG)
+
+4. Technologies and frameworks used:
+Spring boot application, hibernate ORM, firebase admin, open api swagger
