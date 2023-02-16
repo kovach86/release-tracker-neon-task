@@ -1,4 +1,4 @@
-# java-demo Release tracker task for neon
+# Java-demo --> Release tracker task for neon
 
 ## Prerequisites:
 - mysql server
@@ -6,8 +6,11 @@
 - docker for desktop (optional)
 
 ## Initial set up
-1. To run application with docker, just navigate to root folder and enter command docker-compose up. It will bring containers for mysql server and for the spring boot api.
-- Without docker, just change mysql connection string(which is located to application.properties) to point to appropriate sql server, and start the app, 
+1. To start application with docker:
+1.1 navigate to root folder and run <b>mvn clean install -DskipTests</b> for jar to be createad
+1.2 from root enter command docker-compose up. It will bring containers for mysql server and for the spring boot api.
+
+1.3 Without docker, just change mysql connection string(which is located to application.properties) to point to appropriate sql server, also username and passowrd. After that just start the app from IDEA, 
 hibernate will create database on start up.
 
 ## Running the app
@@ -19,8 +22,8 @@ hibernate will create database on start up.
 
 ## Authorization
 2.1 First thing first, we need to authorize in order to use other endpoints
-- For authorization i used Bearer token which is obtained from Firebase, since i had test table for user authentication from earlier.
-    So navigate to user/authorize endpoint and execute request. Body data will be preppopulated with data containing info about test user.
+- For authorization i used Bearer token which is obtained from Firebase, since i made test table for user authentication.
+  navigate to user/authorize endpoint and execute request. Body data will be prepopulated with data containing info about test user.
     
 ![authorization-done](https://user-images.githubusercontent.com/2013682/219372721-7cafe562-80c2-4769-8e0b-d0cbb45de352.PNG)
 
@@ -30,7 +33,7 @@ hibernate will create database on start up.
 
  - Hit authorize and then close the pop up and everything should be set.
  - <i> Additional info:</i> If you posses firebase  integration already, and have table of authenticated users, you could donwload your firebase admin sdk and 
- replace with one in project, and try validating against your users location is /resource/static/firebase-authenticate.json.
+replace with one in project, and try validating against your users location is /resource/static/firebase-authenticate.json. or you can just change value of google.credentials.json.location in application.properties to point on different json of your choice.
 
 
 3. Hit some endpoint and you should see in curl section that Bearer is correctly set in header.
@@ -38,4 +41,6 @@ hibernate will create database on start up.
 ![get request](https://user-images.githubusercontent.com/2013682/219374168-f679e1f6-f4ee-4f56-bdd5-f566009c244e.PNG)
 
 4. Technologies and frameworks used:
-Spring boot application, hibernate ORM, firebase admin, open api swagger
+Spring boot application, hibernate ORM, firebase admin, open api swagger, log4j2
+
+
