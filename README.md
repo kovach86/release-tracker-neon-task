@@ -1,11 +1,11 @@
 # java-demo Release tracker task for neon
 
-## Initial set up
-- Prerequisites:
+## Prerequisites:
 mysql server
 jdk 19
 docker for desktop (optional)
 
+## Initial set up
 - Technologies and frameworks used:
 Spring boot application, hibernate ORM, firebase admin, open api swagger
 
