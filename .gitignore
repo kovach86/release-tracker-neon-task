@@ -1,0 +1,37 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+/Logs/spring-boot-logger-log4j2.log
+/Logs/2023-02/spring-boot-logger-log4j2--16-February-2023-1.log.gz
+/Logs/2023-02/spring-boot-logger-log4j2--16-February-2023-2.log.gz
+/Logs/2023-02/spring-boot-logger-log4j2--16-February-2023-3.log.gz
