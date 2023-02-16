@@ -6,12 +6,12 @@
 - docker for desktop (optional)
 
 ## Initial set up
-1. To start application with docker:
+- To start application with docker:
 1.1 navigate to root folder and run <b>mvn clean install -DskipTests</b> for jar to be createad
-1.2 from root enter command <b>docker-compose buidl</b>
+1.2 from root enter command <b>docker-compose build</b>
 1.3 after building is done type <b>docker-compose up</b> This will bring containers for mysql server and for the spring boot api.
 
-1.3 Without docker, just change mysql connection string(which is located to application.properties) to point to appropriate sql server, also username and password accordingly. After that just start the app from IDEA, hibernate will create database on start up.
+- Without docker, just change mysql connection string(which is located to application.properties) to point to appropriate sql server, also username and password accordingly. After that start the app from IDEA, hibernate will create database on start up.
 
 ## Running the app
 
