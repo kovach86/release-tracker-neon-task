@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ReleaseTrakerApplication {
+public class ReleaseTrackerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ReleaseTrakerApplication.class, args);
+		SpringApplication.run(ReleaseTrackerApplication.class, args);
 	}
 
 }
