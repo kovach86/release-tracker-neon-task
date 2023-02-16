@@ -32,13 +32,11 @@ public class ReleaseService implements IReleaseService {
         this._mapper = new ReleaseMapperProfile();
     }
 
-    @Override
     public List<ReleaseDto> getAllReleases() {
         var listOfReleases = _releaseRepository.retrieve();
         return _mapper.mapToReleaseDtoList(listOfReleases);
     }
 
-    @Override
     public ReleaseDto getReleaseById(int releaseId) throws RecordNotFoundException {
         var release = _releaseRepository.getById(releaseId);
         if (release == null)
@@ -46,7 +44,6 @@ public class ReleaseService implements IReleaseService {
         return _mapper.mapToReleaseDto(release);
     }
 
-    @Override
     public void insertRelease(ReleaseDto releaseDto) throws Exception {
         var releaseEntity = _mapper.mapToRelease(releaseDto);
         releaseEntity.setCreatedAt(new Date());
@@ -58,7 +55,6 @@ public class ReleaseService implements IReleaseService {
         _releaseRepository.insert(releaseEntity);
     }
 
-    @Override
     public int updateRelease(int releaseId, ReleaseDto releaseDto) throws DateNotValidException, RecordNotFoundException, InvalidReleaseStatusException {
         var existingReleaseFromDb = _releaseRepository.getById(releaseId);
 
@@ -90,7 +86,6 @@ public class ReleaseService implements IReleaseService {
 
     }
 
-    @Override
     public void
     deleteRelease(int releaseId) throws RecordNotFoundException {
         if (_releaseRepository.getById(releaseId) == null) {
@@ -100,7 +95,6 @@ public class ReleaseService implements IReleaseService {
 
     }
 
-    @Override
     public PaginationResponse filterRelease(String releaseDate, String lastUpdateDate, String createdDate, String releaseStatus, String description, String name, int page, int recordsToTake) {
         Map<Integer, List<Release>> result = _releaseRepository.filter(releaseDate, lastUpdateDate, createdDate, releaseStatus, description, name, page, recordsToTake);
         var firstEntry = result.keySet().stream().findFirst();
