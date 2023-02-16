@@ -7,7 +7,7 @@
 
 ## Initial set up
 - To start application with docker:
--1.1 navigate to root folder and run <b>mvn clean install -DskipTests</b> for jar to be createad
+- 1.1 navigate to root folder and run <b>mvn clean install -DskipTests</b> for jar to be createad
 - 1.2 from root enter command <b>docker-compose build</b>
 - 1.3 after building is done type <b>docker-compose up</b> This will bring containers for mysql server and for the spring boot api.
 
